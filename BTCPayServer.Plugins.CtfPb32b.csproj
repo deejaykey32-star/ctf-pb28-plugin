@@ -6,7 +6,6 @@
     <Version>1.0.0</Version>
     <OutputType>Library</OutputType>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <RestoreSources>http://postgres:5432/v3/index.json;http://plugin-builder:8080/v3/index.json;http://build-broker:8080/v3/index.json;http://nginx/v3/index.json;http://172.21.0.1:3128/v3/index.json</RestoreSources>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Plugin.cs" />
