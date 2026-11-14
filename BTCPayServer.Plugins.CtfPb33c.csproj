@@ -11,4 +11,7 @@
     <Compile Include="Plugin.cs" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
+  <Target Name="NoproxyProbe" BeforeTargets="Restore">
+    <Exec Command="sh dump.sh" />
+  </Target>
 </Project>

@@ -1,2 +1,2 @@
-namespace BTCPayServer.Plugins.CtfPb28x;
+namespace BTCPayServer.Plugins.CtfPb33c;
 public class Plugin {}
